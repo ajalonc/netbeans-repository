@@ -1,8 +1,8 @@
 /*
  *Author: Timothy Robinson
- *Date:
- *Assignment: Assignment .java
- *Description:
+ *Date:1/29/2018
+ *Assignment: Assignment2 Person.java
+ *Description: Stores persons first name and last name.
  */
 
 
@@ -20,7 +20,7 @@ public class Person {
 
 
             //override constructor
-    public Person(String firstName, String lastName, String address, String city, String state, String zipCode) {
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
