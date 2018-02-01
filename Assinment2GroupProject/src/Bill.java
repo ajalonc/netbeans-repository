@@ -56,13 +56,23 @@ public class Bill {
     public void setRoomCost(double roomCost) {
         this.roomCost = roomCost;
     }
+    
+    
+        // calculateTotalCharge method - Timothy Robinson
+    public double calculateTotalCharge() {
+    return (this.medicine + this.doctorFee + this.roomCost);
+    }
+    
+    
 
-    @Override
+    @Override //Timothy Robinson
     public String toString() {
-        return "Id: " + id +
-               "Medicine: $" + medicine + 
-               "DoctorFee: $" + doctorFee + 
-               "RoomCost: $" + roomCost;
+        return "Patient Bill Information:" + "\n" +
+               "**************************" + "\n" +
+               "Patient Id: " + id + "\n" +
+               "Pharmacy Charge: $" + medicine + "\n" +
+               "Doctor Fee: $" + doctorFee + "\n" +
+               "Room Charge: $" + roomCost;
     }
     
     
