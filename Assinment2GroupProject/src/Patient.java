@@ -80,21 +80,24 @@ public class Patient {
 
        
     
-//calculate age method
+//calculate age method - Timothy Robinson
     public int calculateAge() {
         return (depart.getYear() - patientDOB.getYear() );
     }
     
     
     
-    @Override
+    @Override   //Timothy Robinson
     public String toString() {
-        return "id: " + id + "\n" +
-                "patien: " + patient + "\n" +
-                "doctor: " + doctor + "\n" +
-                "patientAge: " + patientDOB +"\n" +
-                "arival: " + arival + "\n" +
-                "depart: " + depart;
+        return "Patient Information: " + "\n" +
+                "**************************" + "\n" +
+                "ID: " + id + "\n" +
+                "Patient: " + patient + ", " + 
+                    this.calculateAge() + " years old" + "\n" +
+                "Doctor: " + doctor + "\n" +
+                "Patients Birth date: " + patientDOB +"\n" +
+                "Admission Date: " + arival + "\n" +
+                "Discharge Date: " + depart;
     }
 
 
