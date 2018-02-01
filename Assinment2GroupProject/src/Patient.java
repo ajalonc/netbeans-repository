@@ -78,6 +78,13 @@ public class Patient {
         this.depart = depart;
     }
 
+    
+    
+    
+    
+    
+    
+    
     @Override
     public String toString() {
         return "id: " + id + "\n" +
