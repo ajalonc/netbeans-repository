@@ -9,7 +9,7 @@
  * @author ajalon
  */
 public class Patient {
-    
+
     private int id;
     private Person patient;
     private Doctor doctor;
@@ -20,7 +20,8 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(int id, Person patient, Doctor doctor, MyDate patientAge, MyDate arival, MyDate depart) {
+    public Patient(int id, Person patient, Doctor doctor, MyDate patientAge,
+                    MyDate arival, MyDate depart) {
         this.id = id;
         this.patient = patient;
         this.doctor = doctor;
@@ -86,8 +87,8 @@ public class Patient {
                 "arival: " + arival + "\n" +
                 "depart: " + depart;
     }
-    
-    
-    
-    
+
+
+
+
 }
