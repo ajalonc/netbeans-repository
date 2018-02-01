@@ -67,12 +67,13 @@ public class Bill {
 
     @Override //Timothy Robinson
     public String toString() {
-        return "Patient Bill Information:" + "\n" +
+        return "\nPatient Bill Information:" + "\n" +
                "**************************" + "\n" +
                "Patient Id: " + id + "\n" +
                "Pharmacy Charge: $" + medicine + "\n" +
                "Doctor Fee: $" + doctorFee + "\n" +
-               "Room Charge: $" + roomCost;
+               "Room Charge: $" + roomCost + "\n\n" + 
+                "Total charge: $" + this.calculateTotalCharge();
     }
     
     
