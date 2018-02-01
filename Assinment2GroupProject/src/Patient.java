@@ -97,7 +97,8 @@ public class Patient {
                 "Doctor: " + doctor + "\n" +
                 "Patients Birth date: " + patientDOB +"\n" +
                 "Admission Date: " + arival + "\n" +
-                "Discharge Date: " + depart;
+                "Discharge Date: " + depart + "\n" +
+                "**************************" + "\n";
     }
 
 
