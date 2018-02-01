@@ -13,7 +13,7 @@ public class Patient {
     private int id;
     private Person patient;
     private Doctor doctor;
-    private MyDate patientAge;
+    private MyDate patientDOB;
     private MyDate arival;
     private MyDate depart;
 
@@ -25,7 +25,7 @@ public class Patient {
         this.id = id;
         this.patient = patient;
         this.doctor = doctor;
-        this.patientAge = patientAge;
+        this.patientDOB = patientAge;
         this.arival = arival;
         this.depart = depart;
     }
@@ -55,11 +55,11 @@ public class Patient {
     }
 
     public MyDate getPatientAge() {
-        return patientAge;
+        return patientDOB;
     }
 
     public void setPatientAge(MyDate patientAge) {
-        this.patientAge = patientAge;
+        this.patientDOB = patientAge;
     }
 
     public MyDate getArival() {
@@ -78,10 +78,12 @@ public class Patient {
         this.depart = depart;
     }
 
+       
     
-    
-    
-    
+//calculate age method
+    public int calculateAge() {
+        return (depart.getYear() - patientDOB.getYear() );
+    }
     
     
     
@@ -90,7 +92,7 @@ public class Patient {
         return "id: " + id + "\n" +
                 "patien: " + patient + "\n" +
                 "doctor: " + doctor + "\n" +
-                "patientAge: " + patientAge +"\n" +
+                "patientAge: " + patientDOB +"\n" +
                 "arival: " + arival + "\n" +
                 "depart: " + depart;
     }
