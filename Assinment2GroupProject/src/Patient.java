@@ -20,12 +20,12 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(int id, Person patient, Doctor doctor, MyDate patientAge,
+    public Patient(int id, Person patient, Doctor doctor, MyDate patientDOB,
                     MyDate arival, MyDate depart) {
         this.id = id;
         this.patient = patient;
         this.doctor = doctor;
-        this.patientDOB = patientAge;
+        this.patientDOB = patientDOB;
         this.arival = arival;
         this.depart = depart;
     }
@@ -54,12 +54,12 @@ public class Patient {
         this.doctor = doctor;
     }
 
-    public MyDate getPatientAge() {
+    public MyDate getPatientDOB() {
         return patientDOB;
     }
 
-    public void setPatientAge(MyDate patientAge) {
-        this.patientDOB = patientAge;
+    public void setPatientDOB(MyDate patientDOB) {
+        this.patientDOB = patientDOB;
     }
 
     public MyDate getArival() {

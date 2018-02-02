@@ -73,7 +73,7 @@ public class Bill {
                "Pharmacy Charge: $" + medicine + "\n" +
                "Doctor Fee: $" + doctorFee + "\n" +
                "Room Charge: $" + roomCost + "\n\n" + 
-                "Total charge: $" + this.calculateTotalCharge();
+                "Total charge: $-.2f" + this.calculateTotalCharge();
     }
     
     
