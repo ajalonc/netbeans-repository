@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author ajalon
  */
 public class Patient {
-
+    
     private int id;
     private Person patient;
     private Doctor doctor;
@@ -21,7 +15,7 @@ public class Patient {
     }
 
     public Patient(int id, Person patient, Doctor doctor, MyDate patientDOB,
-                    MyDate arival, MyDate depart) {
+                   MyDate arival, MyDate depart) {
         this.id = id;
         this.patient = patient;
         this.doctor = doctor;
@@ -77,10 +71,9 @@ public class Patient {
     public void setDepart(MyDate depart) {
         this.depart = depart;
     }
-
-       
     
-//calculate age method - Timothy Robinson
+    
+    //calculate age method - Timothy Robinson
     public int calculateAge() {
         return (depart.getYear() - patientDOB.getYear() );
     }
@@ -101,7 +94,17 @@ public class Patient {
                 "**************************" + "\n";
     }
 
-
-
-
+    //@Override
+    //public String toString() {
+    //    return "id: " + id + "\n" +
+    //            "patien: " + patient + "\n" +
+    //            "doctor: " + doctor + "\n" +
+    //            "patientAge: " + patientAge +"\n" +
+    //            "arival: " + arival + "\n" +
+    //            "depart: " + depart;
+   // }
+    
+    
+    
+    
 }

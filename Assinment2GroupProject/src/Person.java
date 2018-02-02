@@ -1,12 +1,15 @@
-/*
- *Author: Timothy Robinson
- *Date:1/29/2018
- *Assignment: Assignment2 Person.java
- *Description: Stores persons first name and last name.
- */
-
-
-public class Person {
+ /*
+   *Author: Timothy Robinson
+ - *Date:
+ - *Assignment: Assignment .java
+ - *Description:
+ + *Date:1/29/2018
+ + *Assignment: Assignment2 Person.java
+ + *Description: Stores persons first name and last name.
+   */
+  
+  
+ public class Person {
 
         //data members
     private String firstName;

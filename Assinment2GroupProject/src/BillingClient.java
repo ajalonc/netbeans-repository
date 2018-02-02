@@ -16,8 +16,9 @@ public class BillingClient {
         MyDate myDate;
         Person person;
         
-        ArrayList<String>  date;
-        date = new ArrayList<String>();
+        //ArrayList<MyDate> date;
+        //date = new ArrayList<>(3);
+        MyDate [] date = new MyDate[3];
 
         //ajalons code
         System.out.print("Hospital Billing System Program ");
@@ -27,6 +28,7 @@ public class BillingClient {
         String firstName = console.next();
         System.out.print("Enter patient's last name: ");
         String lastName = console.next();
+        
 
         System.out.println("\nEnter Doctor's first name: ");
         String drFirstName = console.next();
@@ -34,6 +36,8 @@ public class BillingClient {
         String drLastName = console.next();
         System.out.println("Enter Docter's specialty: ");
         String drSpecialty = console.next();
+        //doctor = new Doctor( drSpecialty, new Person(drFirstName, drLastName));
+        
         System.out.println("Enter patient's dirth date (xx/xx/xxxx): ");
         String patientAge = console.next();
         String delims = "[/]";
@@ -41,6 +45,8 @@ public class BillingClient {
         int patientMonth = Integer.parseInt(patientDate[0]);
         int patientDay = Integer.parseInt(patientDate[1]);
         int patientYear = Integer.parseInt(patientDate[2]);
+        myDate = new MyDate(patientMonth, patientDay, patientYear);
+        date[0] = myDate ;
 
         System.out.println("Enter patient's admission date (xx/xx/xxxx): ");
         String admission = console.next();
@@ -48,6 +54,8 @@ public class BillingClient {
         int admissionMonth = Integer.parseInt(admissionDate[0]);
         int admissionDay = Integer.parseInt(admissionDate[1]);
         int admissionYear = Integer.parseInt(admissionDate[2]);
+        myDate = new MyDate(admissionMonth, admissionDay, admissionYear);
+        date[1] = myDate;
 
         System.out.println("Enter patient's discharge date (xx/xx/xxxx): ");
         String discharge = console.next();
@@ -55,7 +63,8 @@ public class BillingClient {
         int dischargeMonth = Integer.parseInt(dischargeDate[0]);
         int dischargeDay = Integer.parseInt(dischargeDate[1]);
         int dischargeYear = Integer.parseInt(dischargeDate[2]);
-        date[2] = new MyDate(dischargeMonth, dischargeDay, dischargeYear);
+        myDate = new MyDate(dischargeMonth, dischargeDay, dischargeYear);
+        date[2] = myDate;
 
         System.out.print("\n\nEnter pharmecy charge: ");
         double medicine = console.nextDouble();
@@ -65,6 +74,13 @@ public class BillingClient {
         double room = console.nextDouble();
 
         bill = new Bill(id, medicine, drFee, room);
+        patient = new Patient(id, new Person(firstName, lastName), 
+                new Doctor(drSpecialty, new Person(drFirstName, drLastName)),
+                        date[0], date[1], date[2]);
+        
+       System.out.print(patient);
+       System.out.print(bill);
+       
         //ajalon end
 
     }

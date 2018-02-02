@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author ajalon
@@ -58,7 +52,7 @@ public class Bill {
     }
     
     
-        // calculateTotalCharge method - Timothy Robinson
+    // calculateTotalCharge method - Timothy Robinson
     public double calculateTotalCharge() {
     return (this.medicine + this.doctorFee + this.roomCost);
     }
@@ -73,8 +67,17 @@ public class Bill {
                "Pharmacy Charge: $" + medicine + "\n" +
                "Doctor Fee: $" + doctorFee + "\n" +
                "Room Charge: $" + roomCost + "\n\n" + 
-                "Total charge: $-.2f" + this.calculateTotalCharge();
-    }
+                "Total charge: $" + this.calculateTotalCharge();
+    }          
+    
+
+    //@Override
+    //public String toString() {
+    //    return "Id: " + id +
+    //           "Medicine: $" + medicine + 
+    //           "DoctorFee: $" + doctorFee + 
+    //           "RoomCost: $" + roomCost;
+    //}
     
     
     
