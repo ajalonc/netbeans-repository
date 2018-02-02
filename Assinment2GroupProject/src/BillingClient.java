@@ -6,28 +6,34 @@
 import java.util.Scanner;
 
 public class BillingClient {
+    
+    Bill bill;
+    Doctor doctor;
+    Patient patient;
+    MyDate myDate;
+    Person person;
+    
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         
        
             //ajalons code
-        System.out.println("Hospital Billing System Program ");
-        System.out.print("\nEnter patient's ID: ");
+        System.out.print("Hospital Billing System Program ");
+        System.out.print("\n\nEnter patient's ID: ");
         int id = console.nextInt();
         System.out.print("Enter patient's first name: ");
         String firstName = console.next();
         System.out.print("Enter patient's last name: ");
         String lastName = console.next();
         
-        System.out.print("\nEnter doctor's first name: ");
+        System.out.println("\nEnter Doctor's first name: ");
         String drFirstName = console.next();
-        System.out.print("Enter doctor's last name: ");
+        System.out.println("Enter Doctor's last name: ");
         String drLastName = console.next();
-        System.out.print("Enter docter's specialty: ");
+        System.out.println("Enter Docter's specialty: ");
         String drSpecialty = console.next();
-        
-        System.out.print("\nEnter patient's birth date (xx/xx/xxxx): ");
+        System.out.println("Enter patient's dirth date (xx/xx/xxxx): ");
         String patientAge = console.next();
         String delims = "[/]";
         String[] patientDate = patientAge.split(delims);
@@ -37,35 +43,32 @@ public class BillingClient {
         
         
         
-        System.out.print("Enter patient's admission date (xx/xx/xxxx): ");
+        System.out.println("Enter patient's admission date (xx/xx/xxxx): ");
         String admission = console.next();
         String[] admissionDate = admission.split(delims);
         int admissionMonth = Integer.parseInt(admissionDate[0]);
         int admissionDay = Integer.parseInt(admissionDate[1]);
         int admissionYear = Integer.parseInt(admissionDate[2]);
         
-        System.out.print("Enter patient's discharge date (xx/xx/xxxx): ");
+        System.out.println("Enter patient's discharge date (xx/xx/xxxx): ");
         String discharge = console.next();
         String[] dischargeDate = discharge.split(delims);
         int dischargeMonth = Integer.parseInt(dischargeDate[0]);
         int dischargeDay = Integer.parseInt(dischargeDate[1]);
         int dischargeYear = Integer.parseInt(dischargeDate[2]);
+        myDate = new MyDate( dischargeMonth, dischargeDay, dischargeYear);
         
-        System.out.print("\nEnter pharmecy charge: ");
+        System.out.print("\n\nEnter pharmecy charge: ");
         double medicine = console.nextDouble();
-        System.out.print("Enter docter's fee: ");
+        System.out.print("\nEnter docter's fee: ");
         double drFee = console.nextDouble();
-        System.out.print("Enter room charge: ");
+        System.out.print("\nEnter room charge: ");
         double room = console.nextDouble();
         
+        bill = new Bill(id, medicine, drFee, room);
+        //ajalon end
         
         
-        
-        
-
-        
-        
-          //ajalon end
 
     }
 }
