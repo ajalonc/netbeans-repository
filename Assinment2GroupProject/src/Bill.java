@@ -3,6 +3,9 @@
  * @author ajalon
  */
 public class Bill {
+
+
+
     
     private int id;
     private double medicine;
@@ -50,14 +53,14 @@ public class Bill {
     public void setRoomCost(double roomCost) {
         this.roomCost = roomCost;
     }
-    
-    
+
+
     // calculateTotalCharge method - Timothy Robinson
     public double calculateTotalCharge() {
     return (this.medicine + this.doctorFee + this.roomCost);
     }
-    
-    
+
+
 
     @Override //Timothy Robinson
     public String toString() {
@@ -66,20 +69,20 @@ public class Bill {
                "Patient Id: " + id + "\n" +
                "Pharmacy Charge: $" + medicine + "\n" +
                "Doctor Fee: $" + doctorFee + "\n" +
-               "Room Charge: $" + roomCost + "\n\n" + 
+               "Room Charge: $" + roomCost + "\n\n" +
                 "Total charge: $-.2f" + this.calculateTotalCharge();
-    }          
-    
+    }
+
 
     //@Override
     //public String toString() {
     //    return "Id: " + id +
-    //           "Medicine: $" + medicine + 
-    //           "DoctorFee: $" + doctorFee + 
+    //           "Medicine: $" + medicine +
+    //           "DoctorFee: $" + doctorFee +
     //           "RoomCost: $" + roomCost;
     //}
-    
-    
-    
-    
+
+
+
+
 }
